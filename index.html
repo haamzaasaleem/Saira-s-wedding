@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Saira &amp; Asad — Shadi Mubarak</title>
+  <meta name="description" content="You are cordially invited to celebrate the wedding of Saira Naeem and Asad Ashfaq." />
+  <meta name="theme-color" content="#3b0d1c" />
+  <meta property="og:title" content="Saira & Asad — Wedding Invitation" />
+  <meta property="og:description" content="Join us as we celebrate the union of Saira Naeem and Asad Ashfaq." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-locked">
+
+  <!-- ============ INTRO: 3D ENVELOPE ============ -->
+  <section class="intro" id="intro" aria-label="Open the invitation">
+    <div class="intro__glow" aria-hidden="true"></div>
+    <p class="intro__urdu" lang="ur" dir="rtl">دعوتِ شادی</p>
+    <p class="intro__hint">You have received an invitation</p>
+
+    <button class="envelope" id="envelope" type="button" aria-label="Open invitation envelope">
+      <span class="envelope__back"></span>
+      <span class="envelope__letter">
+        <span class="envelope__letter-inner">
+          <span class="letter__small">The wedding of</span>
+          <span class="letter__names">Saira <em>&amp;</em> Asad</span>
+        </span>
+      </span>
+      <span class="envelope__pocket"></span>
+      <span class="envelope__flap">
+        <span class="envelope__seal">S<small>&amp;</small>A</span>
+      </span>
+    </button>
+
+    <p class="intro__tap">Tap the seal to open</p>
+  </section>
+
+  <!-- Floating rose petals & gold sparkles (filled by script.js) -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <main class="site" id="site">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="home">
+      <!-- Marigold (genda) garlands hanging from the top -->
+      <div class="garlands" aria-hidden="true">
+        <div class="garland" style="--i:0"></div>
+        <div class="garland" style="--i:1"></div>
+        <div class="garland" style="--i:2"></div>
+        <div class="garland" style="--i:3"></div>
+        <div class="garland" style="--i:4"></div>
+        <div class="garland" style="--i:5"></div>
+        <div class="garland" style="--i:6"></div>
+      </div>
+
+      <div class="hero__mandala" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="hero__scene">
+        <div class="hero__card" id="heroCard">
+          <div class="jharokha" aria-hidden="true"></div>
+          <div class="hero__layer hero__layer--1">
+            <p class="bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+          </div>
+          <div class="hero__layer hero__layer--2">
+            <p class="hero__pre">With the blessings of Allah<br />and the duas of our families</p>
+          </div>
+          <div class="hero__layer hero__layer--3">
+            <h1 class="hero__names">
+              <span class="name">Saira Naeem</span>
+              <span class="amp">&amp;</span>
+              <span class="name">Asad Ashfaq</span>
+            </h1>
+          </div>
+          <div class="hero__layer hero__layer--2">
+            <p class="hero__sub">request the honour of your presence<br />at their wedding celebrations</p>
+          </div>
+          <div class="hero__layer hero__layer--1">
+            <p class="hero__urdu" lang="ur" dir="rtl">شادی مبارک</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#story" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </header>
+
+    <div class="phulkari" aria-hidden="true"></div>
+
+    <!-- ============ STORY / MESSAGE ============ -->
+    <section class="section story" id="story">
+      <div class="rings reveal" aria-hidden="true">
+        <div class="ring ring--a"></div>
+        <div class="ring ring--b"></div>
+      </div>
+      <div class="story__text reveal">
+        <h2 class="section__title">Two Hearts, One Journey</h2>
+        <p class="quote" lang="ar" dir="rtl">وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+        <p class="quote__en">“And He placed between you affection and mercy.” — Surah Ar-Rum 30:21</p>
+        <p>
+          With hearts full of gratitude and joy, we invite you to share in the
+          happiest days of our lives. Your presence, love and duas will make
+          our celebrations complete.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS: 3D FLIP CARDS ============ -->
+    <section class="section events" id="events">
+      <h2 class="section__title reveal">Shadi ki Taqreebat</h2>
+      <p class="section__lead reveal">Tap a card to reveal the details</p>
+
+      <div class="events__grid">
+        <article class="event reveal" tabindex="0" role="button" aria-pressed="false">
+          <div class="event__inner">
+            <div class="event__face event__front event--mehndi">
+              <p class="event__urdu" lang="ur" dir="rtl">مہندی</p>
+              <div class="event__icon" aria-hidden="true">✿</div>
+              <h3>Mehndi</h3>
+              <p>Dholki, rasm-e-hina, music &amp; dance</p>
+              <span class="event__flip-hint">Tap for details ⟳</span>
+            </div>
+            <div class="event__face event__back">
+              <h3>Mehndi</h3>
+              <!-- EDIT: venue -->
+              <p class="event__venue">Venue to be announced</p>
+              <p class="event__dress">Dress code: Yellow, Green &amp; Orange</p>
+              <p class="event__note">Come ready to dance to the dhol!</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="event reveal" tabindex="0" role="button" aria-pressed="false">
+          <div class="event__inner">
+            <div class="event__face event__front event--baraat">
+              <p class="event__urdu" lang="ur" dir="rtl">بارات</p>
+              <div class="event__icon" aria-hidden="true">❖</div>
+              <h3>Baraat</h3>
+              <p>Nikah &amp; Rukhsati</p>
+              <span class="event__flip-hint">Tap for details ⟳</span>
+            </div>
+            <div class="event__face event__back">
+              <h3>Baraat</h3>
+              <!-- EDIT: venue -->
+              <p class="event__venue">Venue to be announced</p>
+              <p class="event__dress">Dress code: Traditional / Formal</p>
+              <p class="event__note">Join us as the baraat arrives with dhol &amp; joy</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="event reveal" tabindex="0" role="button" aria-pressed="false">
+          <div class="event__inner">
+            <div class="event__face event__front event--walima">
+              <p class="event__urdu" lang="ur" dir="rtl">ولیمہ</p>
+              <div class="event__icon" aria-hidden="true">❦</div>
+              <h3>Walima</h3>
+              <p>Reception &amp; dinner</p>
+              <span class="event__flip-hint">Tap for details ⟳</span>
+            </div>
+            <div class="event__face event__back">
+              <h3>Walima</h3>
+              <!-- EDIT: venue -->
+              <p class="event__venue">Venue to be announced</p>
+              <p class="event__dress">Dress code: Formal</p>
+              <p class="event__note">Celebrate the newlyweds with us</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="phulkari" aria-hidden="true"></div>
+
+    <!-- ============ VENUE ============ -->
+    <section class="section venue" id="venue">
+      <div class="venue__card reveal">
+        <div class="venue__cube" aria-hidden="true">
+          <div class="cube">
+            <span class="cube__face cube__face--front">❤</span>
+            <span class="cube__face cube__face--back">S</span>
+            <span class="cube__face cube__face--right">A</span>
+            <span class="cube__face cube__face--left">✿</span>
+            <span class="cube__face cube__face--top">❦</span>
+            <span class="cube__face cube__face--bottom">❖</span>
+          </div>
+        </div>
+        <h2 class="section__title">Find Your Way</h2>
+        <!-- EDIT: venue name, address and map link -->
+        <p>Venue details will be shared soon</p>
+        <a class="btn" href="https://maps.google.com/" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section class="section rsvp" id="rsvp">
+      <div class="rsvp__card reveal">
+        <h2 class="section__title">Kindly RSVP</h2>
+        <p class="section__lead">We would be delighted to know if you can join us</p>
+        <form class="rsvp__form" id="rsvpForm">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            <span>Number of guests</span>
+            <input type="number" name="guests" min="1" max="20" value="1" required />
+          </label>
+          <fieldset class="rsvp__choice">
+            <legend>Will you attend?</legend>
+            <label><input type="radio" name="attending" value="Joyfully accepts" checked /> Joyfully accept</label>
+            <label><input type="radio" name="attending" value="Regretfully declines" /> Regretfully decline</label>
+          </fieldset>
+          <label>
+            <span>Duas &amp; wishes for the couple (optional)</span>
+            <textarea name="message" rows="3"></textarea>
+          </label>
+          <button class="btn" type="submit">Send RSVP via WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__urdu" lang="ur" dir="rtl">آپ کی آمد ہمارے لیے باعثِ مسرت ہوگی</p>
+      <p class="footer__names">Saira <em>&amp;</em> Asad</p>
+      <p>Your presence will be an honour for us</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
