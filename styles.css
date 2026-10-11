@@ -304,7 +304,7 @@ a { color: var(--gold-light); }
 /* =========================================================
    SITE / SECTIONS
    ========================================================= */
-.site { position: relative; z-index: 1; }
+.site { position: relative; z-index: 1; overflow-x: hidden; overflow-x: clip; }
 
 .section {
   position: relative;
@@ -351,6 +351,7 @@ a { color: var(--gold-light); }
   padding: 80px var(--gutter);
   perspective: 1200px;
   overflow: hidden;
+  overflow: clip;
 }
 
 .hero__mandala {
@@ -798,13 +799,11 @@ body.is-ready .hero__card { animation-play-state: running; }
 .event__date { font-weight: 600; color: var(--maroon-700); }
 .event__time { letter-spacing: .1em; }
 .event__venue { font-style: italic; }
-.event__dress { font-size: .85em; color: var(--gold-dark); text-transform: uppercase; letter-spacing: .1em; }
 
 /* =========================================================
    VENUE — 3D cube
    ========================================================= */
-.venue__card,
-.rsvp__card {
+.venue__card {
   position: relative;
   max-width: 640px;
   margin: 0 auto;
@@ -858,7 +857,7 @@ body.is-ready .hero__card { animation-play-state: running; }
 }
 
 /* =========================================================
-   BUTTONS & FORM
+   BUTTONS
    ========================================================= */
 .btn {
   display: inline-block;
@@ -882,58 +881,6 @@ body.is-ready .hero__card { animation-play-state: running; }
 .btn:hover { background-position: right center; }
 .btn:active { transform: translateY(6px); box-shadow: 0 2px 0 var(--gold-dark), 0 6px 12px rgba(0, 0, 0, .4); }
 .btn:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
-
-.rsvp__form {
-  display: grid;
-  gap: 18px;
-  text-align: left;
-  margin-top: 1.5rem;
-}
-
-.rsvp__form label > span,
-.rsvp__choice legend {
-  display: block;
-  margin-bottom: 6px;
-  font-size: .8rem;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-}
-
-.rsvp__form input[type="text"],
-.rsvp__form input[type="number"],
-.rsvp__form textarea {
-  width: 100%;
-  padding: .7em .9em;
-  font: inherit;
-  color: var(--ivory);
-  background: rgba(0, 0, 0, .25);
-  border: 1px solid rgba(212, 175, 55, .5);
-  border-radius: 10px;
-  transition: border-color .2s, box-shadow .2s;
-}
-
-.rsvp__form input:focus,
-.rsvp__form textarea:focus {
-  outline: none;
-  border-color: var(--gold-light);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, .25);
-}
-
-.rsvp__choice {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-}
-
-.rsvp__choice legend { width: 100%; }
-.rsvp__choice label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
-.rsvp__choice input { accent-color: var(--gold); width: 18px; height: 18px; }
-
-.rsvp__form .btn { justify-self: center; }
 
 /* =========================================================
    FOOTER
@@ -963,13 +910,15 @@ body.is-ready .hero__card { animation-play-state: running; }
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-@media (max-width: 860px) {
+@media (max-width: 700px) {
   .events__grid {
     grid-template-columns: minmax(0, 420px);
     justify-content: center;
   }
-  .event__inner { min-height: 320px; }
+  .event__inner { min-height: 300px; }
+}
 
+@media (max-width: 860px) {
   .story {
     grid-template-columns: 1fr;
     text-align: center;

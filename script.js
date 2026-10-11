@@ -2,10 +2,6 @@
 (function () {
   "use strict";
 
-  // EDIT: WhatsApp number that receives RSVPs, international format, digits only
-  // e.g. "923001234567". Leave empty to let the guest choose a contact in WhatsApp.
-  var RSVP_WHATSAPP = "";
-
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var body = document.body;
 
@@ -109,20 +105,5 @@
     el.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
     });
-  });
-
-  /* ---------- RSVP via WhatsApp ---------- */
-  var form = document.getElementById("rsvpForm");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var d = new FormData(form);
-    var text =
-      "Assalam-o-Alaikum! RSVP for Saira & Asad's wedding\n" +
-      "Name: " + d.get("name") + "\n" +
-      "Guests: " + d.get("guests") + "\n" +
-      "Response: " + d.get("attending") +
-      (d.get("message") ? "\nMessage: " + d.get("message") : "");
-    var url = "https://wa.me/" + RSVP_WHATSAPP + "?text=" + encodeURIComponent(text);
-    window.open(url, "_blank", "noopener");
   });
 })();
